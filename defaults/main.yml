@@ -1,0 +1,20 @@
+---
+# Grabbed from the nginx_certbot_base role:
+# - letsencrypt_web_dir (default: /var/lib/letsencrypt)
+# - certbot_dry_run (default: false)
+
+# RSA key size
+letsencrypt_key_size: 2048
+
+# Administrator email. A notificatioin will be send to this email
+# if the cert is about to expire.
+letsencrypt_email:
+
+# The main domain that you want to request.
+# This will become the certificate's name.
+letsencrypt_domain:
+
+# A list of extra domains to add to the cert (the output will still
+# be the same: one certificate). This is usefull to request
+# the www variant for the domain.
+letsencrypt_extra_domains: []
