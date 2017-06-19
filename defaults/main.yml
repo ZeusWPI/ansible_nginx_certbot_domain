@@ -1,6 +1,6 @@
 ---
 # Grabbed from the nginx_certbot_base role:
-# - letsencrypt_web_dir (default: /var/lib/letsencrypt)
+# - letsencrypt_webroot (default: /var/lib/letsencrypt)
 # - certbot_dry_run (default: false)
 
 # RSA key size

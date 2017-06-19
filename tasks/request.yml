@@ -16,7 +16,7 @@
   when: nginx_installed.rc == 0
 
 - name: Request letsencrypt certificate
-  command: 'certbot certonly -tn
+  command: 'certbot certonly -n
     --agree-tos
     {% if certbot_dry_run %}
     --dry-run
@@ -24,7 +24,7 @@
     --rsa-key-size {{ letsencrypt_key_size }}
     --email {{ letsencrypt_email }}
     --webroot
-    --webroot-path {{ letsencrypt_web_dir }}
+    --webroot-path {{ letsencrypt_webroot }}
     --cert-name {{ letsencrypt_domain }}
     --domain {{ letsencrypt_domain }}
     {% for item in letsencrypt_extra_domains %}
